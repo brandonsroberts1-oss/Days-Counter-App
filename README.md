@@ -117,7 +117,9 @@ The site is plain static files with no build step. To publish it free on GitHub 
 1. Push this repository to GitHub.
 2. Go to **Settings → Pages**.
 3. Under **Source**, choose **GitHub Actions**.
-4. Merge to `main` (or run the *Deploy to GitHub Pages* workflow by hand).
+4. Push to the repository's default branch, or run the *Deploy to GitHub Pages*
+   workflow by hand from the **Actions** tab. The workflow publishes from whichever
+   branch GitHub has set as the default, so it doesn't matter what that branch is called.
 
 It lands at `https://<your-username>.github.io/<repo-name>/`. Every path in the app
 is relative, so the sub-folder is fine.
