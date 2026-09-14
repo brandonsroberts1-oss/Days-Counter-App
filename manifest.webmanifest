@@ -1,0 +1,23 @@
+{
+  "name": "Freedays — days free counter",
+  "short_name": "Freedays",
+  "description": "Count the days you've been free of a habit, log slip-ups, track money saved, and spot the patterns behind relapses.",
+  "id": "./",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "portrait",
+  "background_color": "#FBF5EE",
+  "theme_color": "#FBF5EE",
+  "categories": ["health", "lifestyle", "productivity"],
+  "icons": [
+    { "src": "./assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "./assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Daily check-in", "short_name": "Check in", "url": "./?action=checkin" },
+    { "name": "Calendar", "short_name": "Calendar", "url": "./?tab=calendar" }
+  ]
+}

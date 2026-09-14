@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+<title>Freedays — days free counter</title>
+<meta name="description" content="Count the days you've been free of a habit, log slip-ups, track money saved, and spot the patterns behind relapses." />
+
+<!-- PWA -->
+<link rel="manifest" href="./manifest.webmanifest" />
+<meta name="theme-color" content="#FBF5EE" media="(prefers-color-scheme: light)" />
+<meta name="theme-color" content="#16110E" media="(prefers-color-scheme: dark)" />
+<meta name="color-scheme" content="light dark" />
+
+<!-- iOS home-screen app -->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Freedays" />
+<link rel="apple-touch-icon" href="./assets/icons/apple-touch-icon.png" />
+<link rel="icon" href="./assets/icons/icon-192.png" sizes="192x192" type="image/png" />
+
+<link rel="stylesheet" href="./src/styles.css" />
+</head>
+<body>
+  <div id="app" class="app" hidden>
+    <header class="topbar" id="topbar"></header>
+    <main class="view" id="view" tabindex="-1"></main>
+    <nav class="tabbar" id="tabbar" aria-label="Main"></nav>
+  </div>
+
+  <div id="setup-root" class="setup-root" hidden></div>
+  <div id="sheet-root"></div>
+  <div id="toast-root" class="toast-root" aria-live="polite" role="status"></div>
+
+  <noscript>
+    <div class="noscript">Freedays needs JavaScript to run. Please enable it in your browser settings.</div>
+  </noscript>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
