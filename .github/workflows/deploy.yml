@@ -29,11 +29,10 @@ jobs:
       - name: Regenerate icons
         run: node tools/make-icons.mjs
 
-      # enablement turns Pages on for the repository on the first run, so there
-      # is no manual switch to flip before the first deploy.
+      # Requires Pages to be switched on once, by hand:
+      #   Settings -> Pages -> Build and deployment -> Source: GitHub Actions
+      # The workflow token is not permitted to create the Pages site itself.
       - uses: actions/configure-pages@v5
-        with:
-          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
