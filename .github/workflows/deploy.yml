@@ -29,7 +29,11 @@ jobs:
       - name: Regenerate icons
         run: node tools/make-icons.mjs
 
+      # enablement turns Pages on for the repository on the first run, so there
+      # is no manual switch to flip before the first deploy.
       - uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
